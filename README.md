@@ -26,6 +26,16 @@ MySQL2
 Inquirer
 dotenv
 
+after installing the packages you will then need to create a .env file in the root directory of the application. Inside the .env file you will need to add the following:
+
+```
+
+MYSQL_PW=yourpassword
+```
+
+you will then need to run the schema.sql file in MySQL Workbench to create the database and tables. After creating the database and tables you will then need to run the seed.sql file in MySQL Workbench to populate the tables with data.
+
+
 ## Usage
 
 here is a link to the video demonstrating the application's functionality:
