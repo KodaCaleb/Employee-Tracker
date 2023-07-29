@@ -17,13 +17,14 @@ async function viewAllEmployees() {
 }
 
 async function addADepartment() {
-    const { departmentName } = await inquirer.prompt({
-        type: "input",
-        name: "departmentName",
-        message: "Enter a new department name:",
-    });
-    await db.query('INSERT INTO department (name) VALUES (?)', departmentName);
+  const { departmentName } = await inquirer.prompt({
+      type: "input",
+      name: "departmentName",
+      message: "Enter a new department name:",
+  });
+  await db.query('INSERT INTO department (table_name) VALUES (?)', departmentName);
 }
+
 
 async function addARole() {
     const { roleTitle, roleSalary, roleDepartment } = await inquirer.prompt([
